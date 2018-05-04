@@ -10,9 +10,9 @@ public class CameraLerpToTranform : MonoBehaviour {
 	
 	private void FixedUpdate()
 	{
-		if (cameraTarget != null)
+		if (camTarget != null)
 		{
-			var newPos = Vector2.Lerp (transform.position, cameraTarget.position, Time.deltaTime * trackingSpeed);
+			var newPos = Vector2.Lerp (transform.position, camTarget.position, Time.deltaTime * trackingSpeed);
 			var camPos = new Vector3 (newPos.x, newPos.y, -10f);
 			var v3 = camPos;
 			var clampX = Mathf.Clamp (v3.x, minX, maxX);
